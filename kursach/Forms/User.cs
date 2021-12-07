@@ -25,7 +25,7 @@ namespace kursach.Forms
             if (table.Rows.Count > 0)
                 return new User(table.Rows[0]);
             return null;
-            
+            11
         }
     }
   
