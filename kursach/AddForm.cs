@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace kursach.Forms
+namespace kursach
 {
-    public partial class tech : Form
+    public partial class AddForm : Form
     {
-        public tech()
+        public AddForm()
         {
             InitializeComponent();
-        }
-
-        private void btAdd_Click(object sender, EventArgs e)
-        {
-            AddForm newForm = new AddForm();
-            newForm.ShowDialog();
-            UpdateTable();
         }
     }
 }

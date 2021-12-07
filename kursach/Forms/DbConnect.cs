@@ -10,7 +10,7 @@ namespace kursach.Forms
 {
     public class DbConnect
     {
-            private MySqlConnection _connection;
+            private MySqlConnection _Connection;
             public DbConnect()
             {
                 MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
@@ -21,13 +21,13 @@ namespace kursach.Forms
                 builder.Database = "ISPr22-32_KutuzovPD_kursach";
                 builder.CharacterSet = "utf8";
 
-                _connection = new MySqlConnection(builder.ConnectionString);
-                _connection.Open();
+                _Connection = new MySqlConnection(builder.ConnectionString);
+                _Connection.Open();
             }
         public DataTable Select(string sql)
         {
             DataTable table = new DataTable();
-            MySqlCommand command = new MySqlCommand(sql, _connection);
+            MySqlCommand command = new MySqlCommand(sql, _Connection);
             table.Load(command.ExecuteReader());
             return table;
         }

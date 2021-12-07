@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace kursach.Forms
+namespace kursach
 {
-    public partial class tech : Form
+    public partial class Auth : Form
     {
-        public tech()
+        public Auth()
         {
             InitializeComponent();
         }
 
-        private void btAdd_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
-            AddForm newForm = new AddForm();
-            newForm.ShowDialog();
-            UpdateTable();
+
         }
     }
 }
