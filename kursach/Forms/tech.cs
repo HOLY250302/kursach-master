@@ -17,11 +17,6 @@ namespace kursach.Forms
             InitializeComponent();
         }
 
-        private void btAdd_Click(object sender, EventArgs e)
-        {
-            AddForm newForm = new AddForm();
-            newForm.ShowDialog();
-            UpdateTable();
-        }
+       
     }
 }

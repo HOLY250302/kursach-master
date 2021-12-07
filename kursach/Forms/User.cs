@@ -21,6 +21,7 @@ namespace kursach.Forms
         }
         public static User Select(string login, string pass)
         {
+          
             DataTable table = DbConnect.Select("SELECT * FROM Users where Login = '"+login+"' and Password = '"+pass+"';");
             if (table.Rows.Count > 0)
                 return new User(table.Rows[0]);

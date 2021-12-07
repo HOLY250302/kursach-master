@@ -24,12 +24,15 @@ namespace kursach.Forms
                 _Connection = new MySqlConnection(builder.ConnectionString);
                 _Connection.Open();
             }
-        public DataTable Select(string sql)
+        public static DataTable Select(string sql)
         {
             DataTable table = new DataTable();
             MySqlCommand command = new MySqlCommand(sql, _Connection);
             table.Load(command.ExecuteReader());
             return table;
         }
+     
+       
+        
     }
 }
