@@ -112,7 +112,7 @@ namespace kursach.Forms
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Добавить";
             this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+         
             // 
             // button3
             // 
@@ -143,7 +143,6 @@ namespace kursach.Forms
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "tech";
             this.Text = "tech";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

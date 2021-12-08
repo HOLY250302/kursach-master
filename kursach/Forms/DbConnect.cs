@@ -10,7 +10,13 @@ namespace kursach.Forms
 {
     public class DbConnect
     {
-            private MySqlConnection _Connection;
+        private static DbConnect Connect;
+        public static DbConnect GetConnect() {
+            if (Connect == null)
+                Connect = new DbConnect();
+            return Connect;
+        }
+            static private MySqlConnection _Connection;
             public DbConnect()
             {
                 MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
@@ -24,7 +30,7 @@ namespace kursach.Forms
                 _Connection = new MySqlConnection(builder.ConnectionString);
                 _Connection.Open();
             }
-        public static DataTable Select(string sql)
+        public DataTable Select(string sql)
         {
             DataTable table = new DataTable();
             MySqlCommand command = new MySqlCommand(sql, _Connection);

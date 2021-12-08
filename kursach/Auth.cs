@@ -21,7 +21,18 @@ namespace kursach
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            User user = User.Select(tblogin.Text, tbpass.Text)
+          
+            if (AuthForm.Auth(tblogin.Text, tbpass.Text))
+            {
+                Hide();
+                new tech().ShowDialog();
+                AuthForm.DeAuth(); 
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+            }
         }
     }
 }
