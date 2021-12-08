@@ -39,6 +39,7 @@ namespace kursach.Forms
             this.btAdd = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btLoad1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +52,10 @@ namespace kursach.Forms
             this.Colvo,
             this.Cena,
             this.Summ});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 117);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(726, 290);
             this.dataGridView1.TabIndex = 0;
             // 
             // ID
@@ -95,54 +95,60 @@ namespace kursach.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 59);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(12, 48);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 25);
+            this.button1.Size = new System.Drawing.Size(67, 20);
             this.button1.TabIndex = 1;
             this.button1.Text = "Поиск";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(17, 498);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btAdd.Location = new System.Drawing.Point(117, 405);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(171, 41);
+            this.btAdd.Size = new System.Drawing.Size(128, 33);
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Добавить";
             this.btAdd.UseVisualStyleBackColor = true;
-         
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(388, 59);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(291, 48);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 26);
+            this.button3.Size = new System.Drawing.Size(75, 21);
             this.button3.TabIndex = 3;
             this.button3.Text = "Заказать";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(85, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 22);
+            this.textBox1.Size = new System.Drawing.Size(135, 20);
             this.textBox1.TabIndex = 4;
+            // 
+            // btLoad1
+            // 
+            this.btLoad1.Location = new System.Drawing.Point(12, 405);
+            this.btLoad1.Name = "btLoad1";
+            this.btLoad1.Size = new System.Drawing.Size(75, 33);
+            this.btLoad1.TabIndex = 5;
+            this.btLoad1.Text = "Обновить";
+            this.btLoad1.UseVisualStyleBackColor = true;
+            this.btLoad1.Click += new System.EventHandler(this.btLoad1_Click);
             // 
             // tech
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btLoad1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            
             this.Text = "tech";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -162,5 +168,6 @@ namespace kursach.Forms
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btLoad1;
     }
 }

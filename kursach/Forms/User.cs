@@ -10,19 +10,19 @@ namespace kursach.Forms
 {
    public class users
     {
-        public int ID;
-        public string Login;
-        public string Password;
+        public int id;
+        public string login;
+        public string pass;
         public users(DataRow row)
         {
-            ID = Convert.ToInt32(row["users_id"]);
-            Login = Convert.ToString(row["login"]);
-            Password = Convert.ToString(row["pass"]);
+            id = Convert.ToInt32(row["users_id"]);
+            login = Convert.ToString(row["login"]);
+            pass = Convert.ToString(row["pass"]);
         }
         public static users Select(string login, string pass)
         {
 
-            DataTable table = DbConnect.GetConnect().Select("SELECT * FROM Users where Login = '"+login+"' and Password = '"+pass+"';");
+            DataTable table = DbConnect.GetConnect().Select("SELECT * FROM users where login = '"+login+"' and pass = '"+pass+"';");
             if (table.Rows.Count > 0)
                 return new users(table.Rows[0]);
             return null;

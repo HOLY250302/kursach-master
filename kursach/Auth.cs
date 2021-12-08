@@ -26,7 +26,7 @@ namespace kursach
             {
                 Hide();
                 new tech().ShowDialog();
-                AuthForm.DeAuth(); 
+                AuthForm.DeAuth();
                 Show();
             }
             else

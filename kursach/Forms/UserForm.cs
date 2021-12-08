@@ -31,8 +31,8 @@ namespace kursach.Forms
 
             foreach (DataRow row in table.Rows)
             {
-                User user = new User(row);
-                int r = dataGridView1.Rows.Add(user.ID, user.Login, user.Password);
+                users user = new users(row);
+                int r = dataGridView1.Rows.Add(user.id, user.login, user.pass);
                 dataGridView1.Rows[r].Tag = user;
             }
            
