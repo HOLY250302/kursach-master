@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursach.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace kursach
         public AddForm()
         {
             InitializeComponent();
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            tech.AddTech(tbNazv.Text, Convert.ToInt32(tbCol.Text), Convert.ToInt32(tbCena.Text), Convert.ToInt32(tbSumm.Text));
         }
     }
 }

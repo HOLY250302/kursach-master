@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace kursach.Forms
 {
     public partial class tech : Form
@@ -31,10 +32,29 @@ namespace kursach.Forms
 
             foreach (DataRow row in table.Rows)
             {
-                users user = new users(row);
+                 user = new ();
                 int r = dataGridView1.Rows.Add();
-                dataGridView1.Rows[r].Tag = ;
+                dataGridView1.Rows[r].Tag = r;
             }
+        }
+
+        private void btPrepods_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new UserForm().ShowDialog();
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            //  INSERT INTO `ISPr22 - 32_KutuzovPD_kursach`.`tech` (`tech_id`, `nazv`, `col - vo`, `cena`, `summ`) VALUES('22', '22', '22', '22', '22');
+            AddForm newForm = new AddForm();
+            newForm.ShowDialog();
+            UpdateTable();
+        }
+        public static void AddTech( string nazv, int colvo, int cena, int summ)
+        {
+            DbConnect connect = new DbConnect();
+            connect.Select($"INSERT INTO `tech`( `nazv`, `colvo`, `cena`, `summ`) VALUES('{nazv}', '{colvo}', '{cena}', '{summ}')");
         }
     }
 }

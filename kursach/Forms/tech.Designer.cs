@@ -40,6 +40,7 @@ namespace kursach.Forms
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btLoad1 = new System.Windows.Forms.Button();
+            this.btPrepods = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace kursach.Forms
             this.dataGridView1.Location = new System.Drawing.Point(12, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(678, 290);
             this.dataGridView1.TabIndex = 0;
             // 
             // ID
@@ -110,10 +111,11 @@ namespace kursach.Forms
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Добавить";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(291, 48);
+            this.button3.Location = new System.Drawing.Point(250, 47);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 21);
             this.button3.TabIndex = 3;
@@ -137,18 +139,29 @@ namespace kursach.Forms
             this.btLoad1.UseVisualStyleBackColor = true;
             this.btLoad1.Click += new System.EventHandler(this.btLoad1_Click);
             // 
+            // btPrepods
+            // 
+            this.btPrepods.Location = new System.Drawing.Point(615, 45);
+            this.btPrepods.Name = "btPrepods";
+            this.btPrepods.Size = new System.Drawing.Size(75, 23);
+            this.btPrepods.TabIndex = 6;
+            this.btPrepods.Text = "Учителя";
+            this.btPrepods.UseVisualStyleBackColor = true;
+            this.btPrepods.Click += new System.EventHandler(this.btPrepods_Click);
+            // 
             // tech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(724, 450);
+            this.Controls.Add(this.btPrepods);
             this.Controls.Add(this.btLoad1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            
+     
             this.Text = "tech";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -169,5 +182,6 @@ namespace kursach.Forms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btLoad1;
+        private System.Windows.Forms.Button btPrepods;
     }
 }
