@@ -32,7 +32,7 @@ namespace kursach.Forms
 
             foreach (DataRow row in table.Rows)
             {
-                 user = new ();
+                 Tech user = new Tech();
                 int r = dataGridView1.Rows.Add();
                 dataGridView1.Rows[r].Tag = r;
             }

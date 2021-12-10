@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbID = new System.Windows.Forms.TextBox();
             this.tbSumm = new System.Windows.Forms.TextBox();
             this.tbCena = new System.Windows.Forms.TextBox();
             this.tbCol = new System.Windows.Forms.TextBox();
@@ -39,13 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // tbID
-            // 
-            this.tbID.Location = new System.Drawing.Point(182, 28);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(132, 20);
-            this.tbID.TabIndex = 0;
             // 
             // tbSumm
             // 
@@ -135,8 +127,7 @@
             this.Controls.Add(this.tbCol);
             this.Controls.Add(this.tbCena);
             this.Controls.Add(this.tbSumm);
-            this.Controls.Add(this.tbID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddForm";
             this.Text = "AddForm";
             this.ResumeLayout(false);
@@ -145,8 +136,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbSumm;
         private System.Windows.Forms.TextBox tbCena;
         private System.Windows.Forms.TextBox tbCol;
