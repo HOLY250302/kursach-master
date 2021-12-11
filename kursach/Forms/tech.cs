@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace kursach.Forms
 {
     public partial class tech : Form
@@ -25,16 +26,16 @@ namespace kursach.Forms
         }
         public void UpdateTable()
         {
-            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
 
             DbConnect connection = new DbConnect();
             DataTable table = connection.Select("Select * from tech");
 
             foreach (DataRow row in table.Rows)
             {
-                 Tech user = new Tech();
-                int r = dataGridView1.Rows.Add();
-                dataGridView1.Rows[r].Tag = r;
+                 Tech tech = new Tech(row);
+                int r = dataGridView2.Rows.Add();
+                dataGridView2.Rows[r].Tag = r;
             }
         }
 

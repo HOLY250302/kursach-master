@@ -20,7 +20,7 @@ namespace kursach
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            tech.AddTech(tbNazv.Text, Convert.ToInt32(tbCol.Text), Convert.ToInt32(tbCena.Text), Convert.ToInt32(tbSumm.Text));
+            tech.AddTech((tbNazv.Text), Convert.ToInt32(tbCol.Text), Convert.ToInt32(tbCena.Text), Convert.ToInt32(tbSumm.Text));
         }
     }
 }

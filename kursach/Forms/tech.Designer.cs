@@ -29,7 +29,7 @@ namespace kursach.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,23 +41,24 @@ namespace kursach.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btLoad1 = new System.Windows.Forms.Button();
             this.btPrepods = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Name,
             this.Colvo,
             this.Cena,
             this.Summ});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(678, 290);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView2.Location = new System.Drawing.Point(16, 117);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(904, 357);
+            this.dataGridView2.TabIndex = 0;
             // 
             // ID
             // 
@@ -96,18 +97,20 @@ namespace kursach.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 48);
+            this.button1.Location = new System.Drawing.Point(16, 59);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 20);
+            this.button1.Size = new System.Drawing.Size(89, 25);
             this.button1.TabIndex = 1;
             this.button1.Text = "Поиск";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(117, 405);
+            this.btAdd.Location = new System.Drawing.Point(156, 498);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(128, 33);
+            this.btAdd.Size = new System.Drawing.Size(171, 41);
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Добавить";
             this.btAdd.UseVisualStyleBackColor = true;
@@ -115,25 +118,28 @@ namespace kursach.Forms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(250, 47);
+            this.button3.Location = new System.Drawing.Point(333, 58);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 21);
+            this.button3.Size = new System.Drawing.Size(100, 26);
             this.button3.TabIndex = 3;
             this.button3.Text = "Заказать";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 48);
+            this.textBox1.Location = new System.Drawing.Point(113, 59);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
+            this.textBox1.Size = new System.Drawing.Size(179, 22);
             this.textBox1.TabIndex = 4;
             // 
             // btLoad1
             // 
-            this.btLoad1.Location = new System.Drawing.Point(12, 405);
+            this.btLoad1.Location = new System.Drawing.Point(16, 498);
+            this.btLoad1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btLoad1.Name = "btLoad1";
-            this.btLoad1.Size = new System.Drawing.Size(75, 33);
+            this.btLoad1.Size = new System.Drawing.Size(100, 41);
             this.btLoad1.TabIndex = 5;
             this.btLoad1.Text = "Обновить";
             this.btLoad1.UseVisualStyleBackColor = true;
@@ -141,9 +147,10 @@ namespace kursach.Forms
             // 
             // btPrepods
             // 
-            this.btPrepods.Location = new System.Drawing.Point(615, 45);
+            this.btPrepods.Location = new System.Drawing.Point(820, 55);
+            this.btPrepods.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btPrepods.Name = "btPrepods";
-            this.btPrepods.Size = new System.Drawing.Size(75, 23);
+            this.btPrepods.Size = new System.Drawing.Size(100, 28);
             this.btPrepods.TabIndex = 6;
             this.btPrepods.Text = "Учителя";
             this.btPrepods.UseVisualStyleBackColor = true;
@@ -151,19 +158,20 @@ namespace kursach.Forms
             // 
             // tech
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 450);
+            this.ClientSize = new System.Drawing.Size(965, 554);
             this.Controls.Add(this.btPrepods);
             this.Controls.Add(this.btLoad1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-     
+            this.Controls.Add(this.dataGridView2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            
             this.Text = "tech";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +179,7 @@ namespace kursach.Forms
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colvo;

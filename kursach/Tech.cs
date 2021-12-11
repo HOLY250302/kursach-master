@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursach.Forms;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,6 +22,17 @@ namespace kursach
             colvo = Convert.ToInt32(row["colvo"]);
             cena = Convert.ToInt32(row["cena"]);
             summ = Convert.ToInt32(row["summ"]);
+           
         }
+        public static Tech Select(string nazv, int colvo, int cena, int summ)
+        {
+
+            DataTable table = DbConnect.GetConnect().Select("SELECT * FROM tech where nazv = '" + nazv + "' and colvo = '" + colvo + " and cena = '"+cena+"' and summ = '"+summ+"");
+            if (table.Rows.Count > 0)
+                return new Tech(table.Rows[0]);
+            return null;
+
+        }
+
     }
 }
