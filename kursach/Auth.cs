@@ -22,11 +22,11 @@ namespace kursach
         private void btLogin_Click(object sender, EventArgs e)
         {
           
-            if (AuthForm.Auth(tblogin.Text, tbpass.Text))
+            if (AuthManager.Auth(tblogin.Text, tbpass.Text))
             {
                 Hide();
-                new tech().ShowDialog();
-                AuthForm.DeAuth();
+                new UserForm().ShowDialog();
+                //AuthManager.DeAuth();
                 Show();
             }
             else

@@ -25,7 +25,7 @@ namespace kursach.Forms
                 builder.UserID = "ISPr22-32_KutuzovPD";
                 builder.Password = "ISPr22-32_KutuzovPD";
                 builder.Port = 3306;
-                builder.Database = "ISPr22-32_KutuzovPD_kursach";
+                builder.Database = "ISPr22-32_KutuzovPD_kurs";
                 builder.CharacterSet = "utf8";
 
                 _Connection = new MySqlConnection(builder.ConnectionString);

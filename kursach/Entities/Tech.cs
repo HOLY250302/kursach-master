@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace kursach
 {
-    class Tech
+    public class Tech
     {
-        public int id;
-        public string nazv;
-        public int colvo;
-        public int cena;
-        public int summ;
+        public int ID;
+        public string Nazv;
+        public int Colvo;
+        public int Cena;
+        public int Summ;
         public Tech(DataRow row)
         {
-            id = Convert.ToInt32(row["tech_id"]);
-            nazv = Convert.ToString(row["nazv"]);
-            colvo = Convert.ToInt32(row["colvo"]);
-            cena = Convert.ToInt32(row["cena"]);
-            summ = Convert.ToInt32(row["summ"]);
+            ID = Convert.ToInt32(row["tech_id"]);
+            Nazv = Convert.ToString(row["nazv"]);
+            Colvo = Convert.ToInt32(row["colvo"]);
+            Cena = Convert.ToInt32(row["cena"]);
+            Summ = Convert.ToInt32(row["summ"]);
            
         }
         public static Tech Select(string nazv, int colvo, int cena, int summ)

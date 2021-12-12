@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace kursach.Forms
 {
-    public partial class tech : Form
+    public partial class TechForm : Form
     {
-        public tech(DataRow row)
+        public TechForm()
         {
             InitializeComponent();
             UpdateTable();
@@ -28,29 +28,14 @@ namespace kursach.Forms
         public void UpdateTable()
         {
             dataGridView2.Rows.Clear();
-
-            DbConnect connection = new DbConnect();
-            DataTable table = connection.Select("Select * from tech");
-
+            DataTable table = DbConnect.GetConnect().Select("SELECT * FROM tech" +
+                " where nazv like '%" + tbSearch.Text + "%';");
             foreach (DataRow row in table.Rows)
             {
-                 Tech tech = new Tech(row);
-                int r = dataGridView2.Rows.Add(tech.id ,tech.nazv, tech.colvo, tech.cena, tech.summ);
-                dataGridView2.Rows[r].Tag = r;
+                Tech t = new Tech(row);
+                dataGridView2.Rows.Add(t.ID, t.Nazv, t.Colvo, t.Cena, t.Summ);
             }
-
         }
-        public static List<tech> Select(string search)
-        {
-            List<tech> tech = new List<tech>();
-            DataTable table = DbConnect.Select("SELECT * FROM `ISPr22 - 32_KutuzovPD_kursach`.tech" +
-                " where nazv like '%%';");
-            foreach(DataRow row in table.Rows)
-            {
-                tech.Add(new tech(row));
-            }
-            return tech;
-        } 
 
         private void btPrepods_Click(object sender, EventArgs e)
         {
@@ -61,7 +46,7 @@ namespace kursach.Forms
         private void btAdd_Click(object sender, EventArgs e)
         {
             //  INSERT INTO `ISPr22 - 32_KutuzovPD_kursach`.`tech` (`tech_id`, `nazv`, `col - vo`, `cena`, `summ`) VALUES('22', '22', '22', '22', '22');
-            AddForm newForm = new AddForm();
+            AddZakazForm newForm = new AddZakazForm();
             newForm.ShowDialog();
             UpdateTable();
         }
@@ -74,6 +59,11 @@ namespace kursach.Forms
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             UpdateTable();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

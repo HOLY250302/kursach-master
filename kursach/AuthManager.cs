@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace kursach
 {
-    static class AuthForm
+    static class AuthManager
     {
-        public static users user { get; private set; }
+        public static User user { get; private set; }
 
         public static bool Auth(string Login, string pass)
         {
-            user = users.Select(Login, pass);
+            user = User.Select(Login, pass);
             if (user != null)
                 return true;
             else
